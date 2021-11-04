@@ -17,11 +17,16 @@ app.post('/form', (req, res) => {
     from: 'Mailer Test <collin.larkin7@ethereal.email>', //адрес почтового ящика, с которого отпровляется сообщение
     to: req.body.email, // адрес, на который будет отпраляться информация
     subject: 'Тема письма',
-    text: `Поздравляю - все четко!
+    html: `<h2>Поздравляю - все четко!</h2>
     
-    Ваши данные:
-    login: ${req.body.email},
-    pass: ${req.body.pass}
+    <b>Ваши данные:</b>
+    <ul>
+      <li>login: ${req.body.email},</li>
+      <li>pass: ${req.body.pass}</li>
+    </ul>
+    
+    ${req.body.check}
+    
     `
   }
   mailer(message);

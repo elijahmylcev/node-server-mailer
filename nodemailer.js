@@ -9,3 +9,12 @@ const transporter = nodemailer.createTransport({
     pass: '5NnVJhTssurAga1jdU' //password
   }
 });
+
+const mailer = message => {
+  transporter.sendMail(message, (err, info) => {
+    if (err) return console.log(err);
+    console.log(`Email sent: ${info}`);
+  })
+}
+
+module.exports = mailer

@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express()
+const app = express();
+const mailer = require('nodemailer.js');
 
 const PORT = 3001;
 let user = undefined;

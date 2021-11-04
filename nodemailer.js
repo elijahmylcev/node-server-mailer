@@ -5,8 +5,8 @@ const transporter = nodemailer.createTransport({
   port: 587,//порт почтового сервера, с которого будет отправляться email
   secure: false,
   auth: {
-    user: 'collin.larkin7@ethereal.email', //login
-    pass: '5NnVJhTssurAga1jdU' //password
+    user: 'judy.lueilwitz59@ethereal.email', //login
+    pass: 'Nudj7nz6KZ6BjMDQYZ' //password
   }
 });
 
